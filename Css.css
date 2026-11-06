@@ -1,0 +1,24 @@
+body {
+  font-family: Arial;
+  font-size: 14px;
+  color:black;
+  background-color : #ffffff;
+  margin:  0;
+}
+.contenedor {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+}
+footer{
+    color :crimson
+}
+.div1{
+    background-color:darkgrey;
+
+}
+.div2{
+background-color:darkslategray;
+}
+main {
+    background-color:lightgrey;
+}

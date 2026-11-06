@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Formulario</title>
+   <link rel="stylesheet" href="Css.css">
+
+</head>
+<body>
+  
+<form>
+    <div class="div1">
+       
+        <label for="datos"><h4 class="text_mayus">Datos para el registro en plataforma</h4></label>
+        <input type="text" class="label" name="name_user" placeholder="Ingrese sus nombres"><br>
+        <input type="text" class="label" name="ape_user" placeholder="Ingrese sus apellidos"><br>
+        <input type="text" class="label" name="email_user" placeholder="Ingrese su correo"><br>
+        <br></br>
+        <label for="ciudad" style="color: white;">Ciudad de origen: </label><span>
+          
+        <select name="ciudad">
+            <option value="Portoviejo">Portoviejo</option>
+            <option value="Manta">Manta</option>
+            <option value="Chone">Chone</option>
+            <option value="Santa Ana">Santa Ana</option>
+            <option value="Paján">Paján</option></span>
+        </select>
+     <br></br>
+        <textarea name="textarea_frase" id="" cols="30" rows="6" placeholder="Aquí podrá colocar su frase célebre favorita"></textarea><br><br>
+        <div class="botoncito_registrar">
+            <input type="submit" name="insertar" style="background-color: darkgreen; color: white" value="Registrar">
+            <input type="reset" style="background-color: brown; color: white;" name="borrar" value="Borrar form">
+        </div>
+    </div>
+</form>
+<nav >
+    <h3>Navegacion</h3>
+  <li><a href="Hola.html">Inicio</a></li>
+  <li><a href="Horario.html">Horario</a></li>
+  <li><a href="Leccion.html">Ingreso de datos</a></li>
+</nav>
+
+<script src="codigo.js"></script>
+</body>
+</html>
