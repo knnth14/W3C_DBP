@@ -1,47 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Formulario</title>
-   <link rel="stylesheet" href="Css.css">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulario de registro</title>
+  <link rel="stylesheet" href="Css.css">
+  <script src="codigo.js" defer></script>
 </head>
 <body>
-  
-<form>
-    <div class="div1">
-       
-        <label for="datos"><h4 class="text_mayus">Datos para el registro en plataforma</h4></label>
-        <input type="text" class="label" name="name_user" placeholder="Ingrese sus nombres"><br>
-        <input type="text" class="label" name="ape_user" placeholder="Ingrese sus apellidos"><br>
-        <input type="text" class="label" name="email_user" placeholder="Ingrese su correo"><br>
-        <br></br>
-        <label for="ciudad" style="color: white;">Ciudad de origen: </label><span>
-          
-        <select name="ciudad">
-            <option value="Portoviejo">Portoviejo</option>
-            <option value="Manta">Manta</option>
-            <option value="Chone">Chone</option>
-            <option value="Santa Ana">Santa Ana</option>
-            <option value="Paján">Paján</option></span>
-        </select>
-     <br></br>
-        <textarea name="textarea_frase" id="" cols="30" rows="6" placeholder="Aquí podrá colocar su frase célebre favorita"></textarea><br><br>
-        <div class="botoncito_registrar">
-            <input type="submit" name="insertar" style="background-color: darkgreen; color: white" value="Registrar">
-            <input type="reset" style="background-color: brown; color: white;" name="borrar" value="Borrar form">
-        </div>
-    </div>
-</form>
-<nav >
-    <h3>Navegacion</h3>
-  <li><a href="Hola.html">Inicio</a></li>
-  <li><a href="Horario.html">Horario</a></li>
-  <li><a href="Leccion.html">Ingreso de datos</a></li>
-</nav>
 
-<script src="codigo.js"></script>
+<header>
+  <h1>Datos para el registro en plataforma</h1>
+  <nav>
+    <ul>
+      <li><a href="Hola.html">Inicio</a></li>
+      <li><a href="Horario.html">Horario</a></li>
+      <li><a href="Leccion.html">Ingreso de datos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>Formulario</h2>
+    <p>Los campos con (obligatorio) hay que llenarlos.</p>
+
+    <form id="form-registro">
+      <label for="nombres">Nombres:</label>
+      <input type="text" id="nombres" name="name_user" placeholder="Ingrese sus nombres" autocomplete="given-name" required>
+      <span class="error" id="error-nombres"></span>
+
+      <label for="apellidos">Apellidos:</label>
+      <input type="text" id="apellidos" name="ape_user" placeholder="Ingrese sus apellidos" autocomplete="family-name" required>
+      <span class="error" id="error-apellidos"></span>
+
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" name="email_user" placeholder="Ingrese su correo" autocomplete="email" required>
+      <span class="error" id="error-correo"></span>
+
+      <label for="ciudad">Ciudad de origen:</label>
+      <select name="ciudad" id="ciudad">
+        <option value="Portoviejo">Portoviejo</option>
+        <option value="Manta">Manta</option>
+        <option value="Chone">Chone</option>
+        <option value="Santa Ana">Santa Ana</option>
+        <option value="Paján">Paján</option>
+      </select>
+
+      <label for="frase">Frase favorita:</label>
+      <textarea name="textarea_frase" id="frase" rows="6" placeholder="Aquí podrá colocar su frase célebre favorita"></textarea>
+
+      <p id="estado" role="status"></p>
+
+      <button type="submit" name="insertar" class="verde">Registrar</button>
+      <button type="reset" name="borrar" class="cafe">Borrar form</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>Mi primera web</p>
+</footer>
+
 </body>
 </html>
